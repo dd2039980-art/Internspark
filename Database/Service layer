@@ -1,0 +1,19 @@
+@Service
+@RequiredArgsConstructor
+public class UserService {
+
+    private final UserRepository userRepository;
+    private final OrderRepository orderRepository;
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    public List<Order> getOrdersByUser(Long userId) {
+        return orderRepository.findOrdersByUserId(userId);
+    }
+
+    public User createUser(User user) {
+        return userRepository.save(user);
+    }
+}
