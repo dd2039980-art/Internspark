@@ -1,0 +1,8 @@
+2026-06-04 10:00:01 [INFO] UserService - Fetching user with id: 1
+2026-06-04 10:00:01 [DEBUG] UserService - User fetched successfully: John
+
+2026-06-04 10:00:02 [INFO] UserService - Fetching user with id: 2
+2026-06-04 10:00:02 [WARN] UserService - User not found for id: 2
+
+2026-06-04 10:00:03 [INFO] UserService - Fetching user with id: -1
+2026-06-04 10:00:03 [ERROR] UserService - Invalid user id: -1
