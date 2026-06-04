@@ -1,0 +1,17 @@
+@RestController
+@RequestMapping("/api")
+@RequiredArgsConstructor
+public class UserController {
+
+    private final UserService userService;
+
+    @GetMapping("/users")
+    public List<User> getUsers() {
+        return userService.getAllUsers();
+    }
+
+    @GetMapping("/users/{id}/orders")
+    public List<Order> getOrders(@PathVariable Long id) {
+        return userService.getOrdersByUser(id);
+    }
+}
