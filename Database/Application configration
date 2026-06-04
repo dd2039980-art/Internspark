@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo_db
+    username: postgres
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: validate   # IMPORTANT (Flyway manages schema)
+    show-sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
